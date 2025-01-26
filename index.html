@@ -49,10 +49,18 @@
                     </p>
                     <a class="btn btn-primary" href="javascript:void(0);" id="profile-link">Create your profile!</a>
                 </div>
-            <div id="profile-form" style="display: none;">
-            <h1>Create Your Profile</h1>
+
+            <!-- profile div -->
+
+
+
+
+            </div>
+
 
             <!-- profile creation form -->
+            <div id="profile-form" style="display: none;">
+            <h1 id="profile-form-title">Create Your Profile</h1>
             <form id="profile-details-form">
                 <div class="mb-3">
                     <label for="username" class="form-label">Name</label>
@@ -104,8 +112,8 @@
             <input type="text" class="form-control username-input" id="username5" placeholder="Enter LinkedIn Username">
         </div>
 
-                <button type="submit" class="btn btn-primary">Save Profile</button>
-                <button type="submit" class="btn btn-primary" id="hide-profile">Back</button>
+                <button type="submit" class="btn btn-primary" id="account_saved">Save Profile</button>
+                <button type="submit" class="btn btn-primary" id="hide-profile">Close</button>
 
             </form>
         </div>
@@ -117,36 +125,14 @@
                 <div class="card-body"><p class="text-white m-0">Other people you might be interested in</p></div>
             </div>
             <!-- Content Row-->
-            <div class="row gx-4 gx-lg-5">
-                <div class="col-md-4 mb-5">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h2 class="card-title">Emma</h2>
-                            <p class="card-text">Information about her</p>
-                        </div>
-                        <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">Find her links</a></div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-5">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h2 class="card-title">James</h2>
-                            <p class="card-text">Information about him</p>
-                        </div>
-                        <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">Find his links</a></div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-5">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h2 class="card-title">Mia</h2>
-                            <p class="card-text">Information about her</p>
-                        </div>
-                        <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">Find her links</a></div>
-                    </div>
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5" id="profile-content-row">
+                <!-- Profiles will be dynamically inserted here -->
                 </div>
             </div>
-        </div>
+
+
+
         <!-- Footer-->
         <footer class="py-5 bg-dark">
             <div class="container px-4 px-lg-5"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p></div>

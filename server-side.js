@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const cors = require('cors');
 const app = express();
-const port = 3000;
+const port = 3001;
 
 // Middleware to parse JSON
 app.use(express.json());
@@ -50,8 +50,19 @@ app.post('/api/save-profile', (req, res) => {
     });
 });
 
+//get profiles form profiles.json
+app.get('/api/profiles', (req, res) => {
+    fs.readFile(path.join(__dirname, 'profiles.json'), 'utf8', (err, data) => {
+        if (err) {
+            return res.status(500).json({ success: false, message: 'Error reading profiles file' });
+        }
+        res.json(JSON.parse(data));
+    });
+});
+
 
 // Start the server
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
 });
+
